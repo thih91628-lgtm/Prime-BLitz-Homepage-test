@@ -1,0 +1,118 @@
+/* main body css */
+.simple-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 24px;
+    background-color: #000000;
+    text-align: center;
+    height: 700px;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 800px; /* Constrains the text width perfectly for single-column reading */
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+}
+
+/* Button Container Layout */
+.hero-cta-group {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* Primary Dark Button */
+.cta-btn.primary {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid rgb(18, 255, 136);
+       /* Smooth transition over 0.3 seconds */
+  transition: transform 0.3s ease-in-out; 
+  
+  /* Performance optimizer for animations */
+  will-change: transform; 
+}
+
+.cta-btn.primary:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+        transform: scale(1.1); /* Scales up to 110% size */
+
+}
+
+/* Secondary Ghost Button */
+.cta-btn.secondary {
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    border: 2px solid #0eff7a;
+       /* Smooth transition over 0.3 seconds */
+  transition: transform 0.3s ease-in-out; 
+  
+  /* Performance optimizer for animations */
+  will-change: transform; 
+}
+
+.cta-btn.secondary:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+        transform: scale(1.1); /* Scales up to 110% size */
+
+}
+
+
+@media (max-width: 640px) {
+    .simple-hero {
+        padding: 60px 16px;
+    }
+
+    .hero-title {
+        font-size: 2.25rem; 
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta-group {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 0.75rem;
+    }
+
+    .cta-btn {
+        width: 100%; /* Full-width buttons on mobile */
+    }
+}

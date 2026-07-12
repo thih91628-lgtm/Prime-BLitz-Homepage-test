@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Prime Blitz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/nav-sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <meta name="color-scheme" content="light">
+</head>
+<body id="top">
+
+    <input type="checkbox" id="sidebar-toggle">
+
+    <label for="sidebar-toggle" class="overlay"></label>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Prime Blitz logo">
+            <span>Prime Blitz</span>
+        </a>
+
+        <form action="#" method="GET" class="search-box desktop-search">
+            <input type="search" placeholder="Search website..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <ul class="desktop-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Categories <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Electronics</a></li>
+                    <li><a href="#">Clothing Line</a></li>
+                    <li><a href="#">Digital Software</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Services <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Consultation Hub</a></li>
+                    <li><a href="#">Device Repair</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="#">Community</a></li>
+        </ul>
+
+        <div class="auth-container">
+            <button commandfor="auth-overlay-panel" command="show-popover" class="auth-trigger-btn">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.2rem;"></i>
+            </button>
+        </div>
+
+        <label for="sidebar-toggle" class="open-btn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </header>
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <label for="sidebar-toggle" class="close-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        
+        <form action="#" method="GET" class="search-box mobile-search">
+            <input type="search" placeholder="Search website..." name="search" required>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+        <nav class="sidebar-nav">
+            <a href="index.html">Home</a>
+            <details class="mobile-dropdown">
+                <summary>Categories</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="#">Electronics</a>
+                    <a href="#">Clothing Line</a>
+                </div>
+            </details>
+            <a href="#">Contact</a>
+            <a href="about.html">About</a>
+            <button commandfor="auth-overlay-panel" command="show-popover" class="mobile-auth sidebar-auth-trigger">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.5rem;"></i> Log In / Sign Up
+            </button>
+        </nav>
+    </aside>
+
+    <main id="auth-overlay-panel" popover class="auth-page-wrapper">
+        <button commandfor="auth-overlay-panel" command="hide-popover" class="modal-close-cross"><i class="fa-solid fa-xmark"></i></button>
+        <input type="checkbox" id="auth-panel-switcher" class="auth-toggle-trigger">
+        <div class="auth-display-card">
+            <div class="auth-forms-holder">
+                <div class="auth-form-column side-signup">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Create Account</h1>
+                        <form action="#" class="auth-core-form">
+                            <div class="auth-input-row"><label class="auth-field-label">Full Name</label><input type="text" required></div>
+                            <div class="auth-input-row"><label class="auth-field-label">Email</label><input type="email" required></div>
+                            <div class="auth-input-row"><label class="auth-field-label">Password</label><input type="password" required></div>
+                            <button type="submit" class="auth-btn btn-dark">Sign Up</button>
+                        </form>
+                        <div class="auth-mobile-switch-notice"><p>Already have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign In</label></p></div>
+                    </div>
+                </div>
+               <div class="auth-form-column side-signin">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Welcome Back</h1>
+                        <form action="#" class="auth-core-form">
+                            <div class="auth-input-row"><label class="auth-field-label">Email</label><input type="email" required></div>
+                            <div class="auth-input-row"><label class="auth-field-label">Password</label><input type="password" required></div>
+                            <button type="submit" class="auth-btn btn-blue">Sign In</button>
+                        </form>
+                        <div class="auth-mobile-switch-notice"><p>Don't have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign Up</label></p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="auth-overlay-curtain">
+                <div class="auth-curtain-inner">
+                    <div class="curtain-message curtain-msg-left">
+                        <h2>New Around Here?</h2>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign Up</label>
+                    </div>
+                    <div class="curtain-message curtain-msg-right">
+                        <h2>Already Registered?</h2>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign In</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- start body here -->
+
+<!-- end body here -->
+
+<!-- ==========================================
+   PURE HTML/CSS FLOATING ACTION WIDGET
+   ========================================== -->
+<!-- Core Position State Tracker Toggle Checkbox -->
+<input type="checkbox" id="pos-left" class="fab-position-state">
+
+<div class="floating-actions" aria-label="Quick actions">
+    <!-- Sub-Menu Open/Close Control Checkbox -->
+    <input type="checkbox" id="fab-toggle" class="fab-menu-state">
+    
+    <!-- Dynamic Submenu Container -->
+    <div class="fab-menu">
+        <a href="#top" title="Back to top" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+        <a href="#faq" title="FAQ" aria-label="FAQ">
+            <i class="fa-solid fa-circle-question"></i>
+        </a>
+    </div>
+    
+    <!-- Button Trigger Base Area -->
+    <div class="main-btn-cluster">
+        <!-- Normal Click Zone (Toggles Sub-Menu Open/Close) -->
+        <label for="fab-toggle" class="fab-main-btn" aria-label="Toggle Quick Actions">
+            <i class="fa-solid fa-plus"></i>
+        </label>
+        
+        <!-- Position Controller Handle (Slides everything to opposite side) -->
+        <label for="pos-left" class="fab-swap-handle" title="Move Menu Position">
+            <i class="fa-solid fa-arrows-left-right"></i>
+        </label>
+    </div>
+</div>
+
+
+      <footer class="page-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>Prime Blitz</h2>
+                <p>Prime Blitz brings innovation, reliable service, and a strong community connection to every customer. Explore our products, join our community, and reach out anytime.</p>
+                <p><strong>Contact</strong>: support@primeblitz.com</p>
+                <p><strong>Phone</strong>: +1 (800) 123-4567</p>
+                <a href="#top">Back to top</a>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Explore</h3>
+                    <a href="#">Home</a>
+                    <a href="#">Categories</a>
+                    <a href="#">Services</a>
+                    <a href="#">Community</a>
+                </div>
+                <div id="faq">
+                    <h3>Support</h3>
+                    <a href="#faq">FAQ</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Submit Ticket</a>
+                    <a href="#">Shipping Info</a>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <a href="#"><i class="fa-brands fa-discord"></i>Discord</a>
+                    <a href="#"><i class="fa-brands fa-telegram-plane"></i>Telegram</a>
+                    <a href="#"><i class="fa-brands fa-microsoft"></i>MS Teams</a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+                </div>
+                <div>
+                    <h3>Company</h3>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Prime Blitz. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="index.html" aria-label="Reference"><i class="fa-solid fa-book"></i> Reference</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

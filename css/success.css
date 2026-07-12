@@ -1,0 +1,79 @@
+/* SUCCESS PAGE TARGET COMPONENT MODIFIERS */
+.auth-page-wrapper .layout-success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 480px;
+}
+
+.auth-page-wrapper .auth-success-body {
+    width: 100%;
+    max-width: 500px;
+    padding: 40px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* SUCCESS CENTRAL ICONS GRAPHICS SETUP */
+.auth-page-wrapper .success-icon-shield {
+    font-size: 4.5rem;
+    color: #2563eb; /* Blue accent icon color */
+    margin-bottom: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-page-wrapper .success-icon-shield.code-green {
+    color: #10b981; /* Green accent icon alternate option */
+}
+
+/* ALIGNMENT NAVIGATION STRUCTURAL SPECS */
+.auth-page-wrapper .success-action-row {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.auth-page-wrapper .text-center {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.auth-page-wrapper .auth-secondary-btn {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.auth-page-wrapper .auth-secondary-btn:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+/* MOBILE SYSTEM CONFIGURATION SCALE */
+@media (max-width: 768px) {
+    .auth-page-wrapper .layout-success {
+        border-radius: 12px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    
+    .auth-page-wrapper .auth-success-body {
+        padding: 40px 16px;
+    }
+
+    .auth-page-wrapper .success-icon-shield {
+        font-size: 3.8rem;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Blitz - Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/nav-sidebar.css">
+    <link rel="stylesheet" href="css/sign-in-up.css">
+    <link rel="stylesheet" href="css/index-layout.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <meta name="color-scheme" content="light">
+</head>
+<body id="top">
+
+    <input type="checkbox" id="sidebar-toggle">
+
+    <label for="sidebar-toggle" class="overlay"></label>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="img1/logo.png" alt="Prime Blitz logo">
+            <span>Prime Blitz <span><i class="fa-solid fa-bolt" style="padding-left: 7px; font-weight: bold; color: rgb(24, 219, 138); font-size: 2rem;"></i></span></span>
+        </a>
+
+        <!-- Desktop Search Bar -->
+        <form action="#" method="GET" class="search-box desktop-search">
+            <input type="search" placeholder="Search..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="desktop-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Dropdown <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">something</a></li>
+                    <li><a href="#">something</a></li>
+                    <li><a href="#">something</a></li>
+                    <li><a href="#">something</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Dropdown2 <i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">something</a></li>
+                    <li><a href="#">something</a></li>
+                    <li><a href="#">something</a></li>
+                    <li><a href="#">something</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Community</a></li>
+        </ul>
+
+        <!-- Top Right Nav Auth Trigger Icon (Desktop) -->
+        <div class="auth-container">
+            <button commandfor="auth-overlay-panel" command="show-popover" class="auth-trigger-btn" title="Log In / Sign Up">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.2rem;"></i>
+            </button>
+        </div>
+
+        <!-- Hamburger Icon Menu Trigger (Mobile) -->
+        <label for="sidebar-toggle" class="open-btn" aria-label="Open Mobile Menu Drawer">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+    </header>
+
+    <!-- Mobile Drawer Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <label for="sidebar-toggle" class="close-btn" aria-label="Close Mobile Menu Drawer">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        
+        <!-- Mobile Search Bar -->
+        <form action="#" method="GET" class="search-box mobile-search">
+            <input type="search" placeholder="Search website..." name="search" required>
+            <button type="submit" aria-label="Submit Search Query">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <!-- Mobile Drawer Navigation Links -->
+        <nav class="sidebar-nav">
+            <a href="index.html" class="active">Home</a>
+            <details class="mobile-dropdown">
+                <summary>Categories</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                </div>
+            </details>
+
+            <details class="mobile-dropdown">
+                <summary>Services</summary>
+                <div class="mobile-dropdown-content">
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                </div>
+            </details>
+
+            <a href="#">Contact</a>
+            <a href="about.html">About</a>
+            <a href="#">Community</a>
+
+            <!-- Mobile Auth Trigger Button inside Drawer -->
+            <button commandfor="auth-overlay-panel" command="show-popover" class="mobile-auth sidebar-auth-trigger">
+                <i class="fa-solid fa-circle-user" style="font-size: 2.5rem;"></i> Log In / Sign Up
+            </button>
+        </nav>
+    </aside>
+
+    <!-- Native Popover Modal Auth Component Container -->
+    <main id="auth-overlay-panel" popover class="auth-page-wrapper">
+        
+        <button commandfor="auth-overlay-panel" command="hide-popover" class="modal-close-cross" aria-label="Close Authentication Panel">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+        <!-- Hidden Checkbox for Form Switch Slide Animation Toggle -->
+        <input type="checkbox" id="auth-panel-switcher" class="auth-toggle-trigger">
+        
+        <!-- Main Form Display Card Wrapper -->
+        <div class="auth-display-card">
+            
+            <div class="auth-forms-holder">
+                
+                <!-- Registration / Sign Up Dynamic Form Box Section -->
+                <div class="auth-form-column side-signup">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Create Account</h1>
+                        <p class="auth-lead">Register an email profile to start building your projects.</p>
+                        
+                        <form action="#" method="get" class="auth-core-form">
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Full Name</label>
+                                <input type="text" placeholder="Your name" required autocomplete="name">
+                            </div>
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Email Address</label>
+                                <input type="email" placeholder="name@example.com" required autocomplete="email">
+                            </div>
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Password</label>
+                                <input type="password" placeholder="Create strong password" required autocomplete="new-password">
+                            </div>
+                            <button type="submit" class="auth-btn btn-dark">Sign Up</button>
+                        </form>
+                        
+                        <!-- Mobile Responsive Alternative Switch Trigger Link -->
+                        <div class="auth-mobile-switch-notice">
+                            <p>Already have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign In</label></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Session Authentication / Sign In Form Box Section -->
+               <div class="auth-form-column side-signin">
+                    <div class="form-content-wrapper">
+                        <h1 class="auth-heading">Welcome Back</h1>
+                        <p class="auth-lead">Sign in to your account to access your workspace portal.</p>
+                        
+                        <form action="#" method="get" class="auth-core-form">
+                            <div class="auth-input-row">
+                                <label class="auth-field-label">Email Address</label>
+                                <input type="email" placeholder="name@example.com" required autocomplete="email">
+                            </div>
+                            <div class="auth-input-row">
+                                <div class="auth-label-split">
+                                    <label class="auth-field-label">Password</label>
+                                    <a href="#" class="auth-inline-link">Forgot password?</a>
+                                </div>
+                                <input type="password" placeholder="Enter your password" required autocomplete="current-password">
+                            </div>
+                            <button type="submit" class="auth-btn btn-blue">Sign In</button>
+                        </form>
+                        
+                        <!-- Mobile Responsive Alternative Switch Trigger Link -->
+                        <div class="auth-mobile-switch-notice">
+                            <p>Don't have an account? <label for="auth-panel-switcher" class="auth-action-link">Sign Up</label></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Sliding Desktop Interactive Visual Curtain Panel Layer -->
+            <div class="auth-overlay-curtain">
+                <div class="auth-curtain-inner">
+                    
+                    <!-- Left Slide Text Message Area Component -->
+                    <div class="curtain-message curtain-msg-left">
+                        <h2>New Around Here?</h2>
+                        <p>Set up your profile configurations and discover our digital workspace platform features.</p>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign Up</label>
+                    </div>
+
+                    <!-- Right Slide Text Message Area Component -->
+                    <div class="curtain-message curtain-msg-right">
+                        <h2>Already Registered?</h2>
+                        <p>Keep your project progress synced by logging back into your community user dashboard.</p>
+                        <label for="auth-panel-switcher" class="curtain-toggle-btn">Go To Sign In</label>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Main Content Dynamic Buffer spacing -->
+    <!-- start body here -->
+<section class="simple-hero">
+  <div class="hero-container">
+    <h1 class="hero-title">
+      Prime BLitz 
+    </h1>
+    
+    <p class="hero-subtitle">
+     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia facilis nobis, veniam velit quaerat inventore vitae praesentium minus quam quia? Aut explicabo eius minima dignissimos dolor unde, magnam debitis. Iste.
+    </p>
+    
+    <div class="hero-cta-group">
+      <a href="#" class="cta-btn primary">something</a>
+      <a href="#" class="cta-btn secondary">something</a>
+    </div>
+  </div>
+</section>
+    <!-- end here body -->
+    <!-- Bottom Floating Quick Action Buttons Controller Interface Module -->
+<!-- ------------ -->
+<!-- Core Position State Tracker Toggle Checkbox -->
+<input type="checkbox" id="pos-left" class="fab-position-state">
+
+<div class="floating-actions" aria-label="Quick actions">
+    <!-- Sub-Menu Open-Close Control Checkbox -->
+    <input type="checkbox" id="fab-toggle" class="fab-menu-state">
+    
+    <div class="fab-menu">
+        <a href="#top" title="Back to top" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+        <a href="#faq" title="FAQ" aria-label="FAQ">
+            <i class="fa-solid fa-circle-question"></i>
+        </a>
+    </div>
+    
+    <!-- Button Trigger Base Area -->
+    <div class="main-btn-cluster">
+        <label for="fab-toggle" class="fab-main-btn" aria-label="Toggle Quick Actions">
+            <i class="fa-solid fa-plus"></i>
+        </label>
+        
+        <label for="pos-left" class="fab-swap-handle" title="Move Menu Position">
+            <i class="fa-solid fa-arrows-left-right"></i>
+        </label>
+    </div>
+</div>
+
+
+    <!-- footer  -->
+ <footer class="page-footer">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>Prime Blitz</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, veritatis alias asperiores dicta, provident atque soluta nihil, qui excepturi assumenda iste similique! Cumque laboriosam fuga deleniti facere blanditiis sapiente dicta!</p>
+                <p><strong>Contact</strong>: toet76322@gmail.com</p>
+                <p><strong>Phone</strong> 09 23055331</p>
+                <a href="#top">Back to top</a>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Explore</h3>
+                  <a href="">Something</a>
+                  <a href="">Something</a>
+                  <a href="">Something</a>
+                  <a href="">Something</a>
+                </div>
+                <div id="faq">
+                    <h3>More</h3>
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                    <a href="">Something</a>
+                </div>
+                <div>
+                    <h3>Community</h3>
+                    <a href="#"><i class="fa-brands fa-discord"></i>Discord</a>
+                    <a href="#"><i class="fa-brands fa-telegram-plane"></i>Telegram</a>
+                    <a href="#"><i class="fa-brands fa-microsoft"></i>MS Teams</a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i>TikTok</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Prime Blitz. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="index.html" aria-label="Reference"><i class="fa-solid fa-book"></i> Reference</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
